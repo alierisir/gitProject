@@ -131,10 +131,3 @@ class Vegetable extends Plant{
 }
 const myFruit = new Fruit("elma")
 const myVeggie= new Vegetable("salatalık")
-
-
-const titles = document.getElementsByTagName("img")
-
-const titleArray=Array.from(titles)
-
-console.log(titleArray)
