@@ -1,4 +1,4 @@
-function getMath(arr) {
+/* function getMath(arr) {
 const max = arr[0] > arr[1] ? arr[0] : arr[1]
 const min = arr[0] >= arr[1] ? arr[1] : arr[0]
 const mod = max % min
@@ -45,7 +45,7 @@ function cascade (arr) {
 }
 
 myArray = cascade(pairs)
-/*
+
 function changeValue(obj){
   let newObject = obj
   newObject["sum"]="alierisir"
@@ -55,7 +55,7 @@ function changeValue(obj){
 let myObject =changeValue(myArray[0])
 
 console.log(myObject)
-*/
+
 
 function validateMail(mail){
   const mailText= "@gmail.com"
@@ -131,3 +131,21 @@ class Vegetable extends Plant{
 }
 const myFruit = new Fruit("elma")
 const myVeggie= new Vegetable("salatalık")
+
+*/
+
+import { Color } from 'three';
+import { IfcViewerAPI } from 'web-ifc-viewer';
+
+const container = document.getElementById('viewer-container');
+const viewer = new IfcViewerAPI({ container, backgroundColor: new Color(0xffffff) });
+viewer.grid.setGrid();
+viewer.axes.setAxes();
+
+async function loadIfc(url) {
+    await viewer.IFC.setWasmPath("../../../");
+    const model = await viewer.IFC.loadIfcUrl(url);
+    viewer.shadowDropper.renderShadow(model.modelID);
+}
+
+loadIfc('./static/05.ifc');
