@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "sudo rollup -c"
+    "build": "rollup -c"
   },
   "keywords": [],
   "author": "",
