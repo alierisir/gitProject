@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow: hidden;
+}
+
+#viewer-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+    width: 100%;
+    height: 100%;
+}
+
+#file-input{
+    font-family: 'Courier New', Courier, monospace;
+    position: absolute;
+    margin-left: 50vw;
+}
+
+#file-upload-button{
+    color:aliceblue;
+    position: absolute;
+}
+
+#author-info{
+    color: darkcyan;
+    font-size: 1rem;
+    font-family:'Courier New', Courier, monospace;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+.ifc-tree-menu {
+    position: absolute;
+    overflow-y: scroll;
+    background-color: white;
+    height: 100vh;
+}
+
+li ul {
+    user-select: none;
+    cursor: pointer;
+}
+
+/* Remove default bullets */
+ul, #myUL {
+    list-style-type: none;
+}
+
+/* Remove margins and padding from the parent ul */
+#myUL {
+    margin: 0.5rem;
+    padding: 0;
+}
+
+/* Style the caret/arrow */
+.caret {
+    cursor: pointer;
+    user-select: none; /* Prevent text selection */
+}
+
+/* Create the caret/arrow with a unicode, and style it */
+.caret::before {
+    content: "\25B6";
+    color: black;
+    display: inline-block;
+    margin-right: 6px;
+}
+
+/* Rotate the caret/arrow icon when clicked on (using JavaScript) */
+.caret-down::before {
+    transform: rotate(90deg);
+}
+
+/* Hide the nested list */
+.nested {
+    display: none;
+}
+
+/* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
+.active {
+    display: block;
+    margin-left: 10px;
+}
